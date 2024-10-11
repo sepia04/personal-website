@@ -1,0 +1,148 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.contact-modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    inset: 0;
+    cursor: pointer;
+    padding: 30px;
+    display: flex;
+    overflow-y: auto;
+    z-index: 15;
+    width: 100%;
+
+    &-main {
+        border-radius: 4px;
+        width: 700px;
+        height: 485px;
+        margin: auto;
+        background-color: $primary-color3;
+        position: relative;
+        padding: 30px;
+        cursor: default;
+    }
+
+    form {
+        width: 100%;
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: 56px;
+
+        gap: 20px;
+
+        #request {
+            box-sizing: border-box;
+            padding-top: 16px;
+            min-width: 100%;
+            max-width: 100%;
+            min-height: 124px;
+            max-height: 284px;
+            resize: none;
+        }
+    }
+
+    &-input {
+        font-family: "Sora-Regular";
+        font-size: 16px;
+        width: 100%;
+        height: 56px;
+        border: 2px solid $primary-color1;
+        border-radius: 4px;
+        padding: 0;
+        padding-left: 24px;
+        outline: none;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: $zinc-color200;
+            transition: all 0.2s;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: $primary-color2;
+            }
+        }
+    }
+
+    &-btns {
+        margin-top: 20px;
+        width: 100%;
+        height: 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 153px;
+            height: 56px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 16px 20px;
+            border: 2px solid $primary-color1;
+            border-radius: 4px;
+            background-color: $primary-color1;
+            color: $primary-color3;
+            font-family: 'Sora-Semibold';
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-color3;
+                color: $primary-color1;
+                border: 2px solid $primary-color1;
+                transition: all 0.4s;
+            }
+        }
+
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            width: 53.2px;
+            height: 53.2px;
+            background-color: $primary-color3;
+            color: $primary-color1;
+            border: 2px solid $primary-color1;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                background-color: $primary-color1;
+                color: white;
+                transition: all 0.4s;
+            }
+        }
+    }
+
+    &-close {
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 50%;
+        width: 53.2px;
+        height: 53.2px;
+        cursor: pointer;
+        font-size: 20px;
+        position: absolute;
+        top: -25px;
+        right: -25px;
+        outline: 2px solid transparent;
+
+        &:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            transition: all 0.4s;
+        }
+
+        &:focus-visible {
+            outline-color: black;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.projects {
+    height: 1765px;
+    background-color: $primary-color1;
+    padding-top: 60px;
+
+    &-title {
+        @include title();
+        color: $primary-color3;
+        margin-bottom: 80px;
+
+        span {
+            font-family: "Sora-ExtraBold";
+        }
+    }
+
+    &-grid {
+        width: 100%;
+        height: 1512px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-columns: minmax(200px, auto);
+        grid-auto-rows: minmax(200px, auto);
+        gap: 0 40px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-img {
+        justify-self: end;
+    }
+
+    .right-text {
+        justify-self: end;
+    }
+
+    .project-card {
+        i {
+            font-size: 20px;
+            cursor: pointer;
+            color: $primary-color3;
+        }
+    }
+
+    .project-number {
+        font-family: "Sora-ExtraBold";
+        font-size: 48px;
+        color: $primary-color3;
+        margin-bottom: 28px;
+    }
+
+    .project-title {
+        font-family: "Sora-Bold";
+        font-size: 32px;
+        color: $primary-color3;
+        margin-bottom: 28px;
+    }
+
+    .project-descr {
+        font-family: "Sora-Regular";
+        font-size: 16px;
+        color: $zinc-color400;
+        margin-bottom: 28px;
+    }
+}

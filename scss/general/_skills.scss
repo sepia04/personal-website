@@ -1,0 +1,54 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.skills {
+    height: 730px;
+    padding: 60px 0;
+
+    &-title {
+        @include title();
+
+        span {
+            font-family: "Sora-ExtraBold";
+        }
+    }
+
+    &-grid {
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 40px 71.5px;
+    }
+
+    &-card {
+        border: 2px solid $primary-color1;
+        border-radius: 4px;
+        background-color: $primary-color3;
+        color: $primary-color1;
+
+        width: 186px;
+        height: 186px;
+
+        @include flex-around-center;
+        flex-direction: column;
+
+        i {
+            font-size: 56px;
+        }
+
+        &:hover {
+            background-color: $primary-color1;
+            color: $primary-color3;
+            transition: all 0.4s;
+        }
+    }
+
+    &-name {
+        font-family: "Sora-Bold";
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

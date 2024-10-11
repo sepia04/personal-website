@@ -1,0 +1,27 @@
+@use 'moduls/font';
+
+@use 'general/header';
+@use 'general/hero';
+@use 'general/skills';
+@use 'general/experience';
+@use 'general/about';
+@use 'general/projects';
+@use 'general/testimonial';
+@use 'general/contact';
+@use 'general/modal';
+@use 'general/footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 88%;
+    margin: 0 auto;
+}

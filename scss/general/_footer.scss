@@ -1,0 +1,51 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.footer {
+    height: 100px;
+    background-color: $primary-color1;
+    color: $primary-color3;
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        width: 140px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: "Sora-Bold";
+
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            text-decoration: none;
+            color: $primary-color3;
+        }
+    }
+
+    &-info {
+        width: 187px;
+        height: 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &-years {
+            font-family: "Sora-SemiBold";
+            font-size: 16px;
+        }
+
+        &-text {
+            font-family: "Sora-SemiBold";
+            font-size: 16px;
+        }
+    }
+}

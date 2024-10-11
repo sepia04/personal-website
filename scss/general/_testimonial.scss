@@ -1,0 +1,162 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.testimonial {
+    height: 715px;
+    @include flex-center-center();
+
+    .container {
+        padding: 60px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        color: $primary-color1;
+        margin-bottom: 40px;
+        @include title();
+
+        span {
+            font-family: "Sora-ExtraBold";
+        }
+    }
+
+    &-grid {
+        max-width: 1215px;
+        width: 100%;
+        padding: 0 24px;
+        position: relative;
+        margin-top: 10px;
+
+        i {
+            top: 50%;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            font-size: 1.25rem;
+            position: absolute;
+            text-align: center;
+            line-height: 50px;
+            background: #fff;
+            border: 2px solid #000000;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+            transform: translateY(-50%);
+            transition: transform 0.1s linear;
+
+            &:hover {
+                background-color: #000;
+                color: #fff;
+                transition: all 0.3s;
+            }
+
+            &:active {
+                transform: translateY(-50%) scale(0.85);
+            }
+
+            &:first-child {
+                left: -2px;
+            }
+
+            &:last-child {
+                right: 3px;
+            }
+        }
+    }
+
+    &-carousel {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: calc((100% / 3) - 12px);
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &.no-transition {
+            scroll-behavior: auto;
+        }
+
+        &.dragging {
+            scroll-snap-type: none;
+            scroll-behavior: auto;
+
+            .testimonial-card {
+                cursor: grab;
+                user-select: none;
+            }
+        }
+    }
+
+    &-card {
+        scroll-snap-align: start;
+        height: 397px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        border: 2px solid #000000;
+        border-radius: 20px;
+        box-shadow: 0 6px 8px rgba(24, 39, 75, 0.12);
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            transition: all 0.5s;
+        }
+
+        &:hover p,
+        &:hover h2,
+        &:hover span {
+            color: #fff;
+        }
+
+        &:hover hr {
+            border-color: #fff;
+        }
+
+        img {
+            margin-top: 40px;
+            display: block;
+            width: 96px;
+            height: 96px;
+        }
+
+        p {
+            width: 290px;
+            text-align: center;
+            margin-top: 24px;
+            min-width: 290px;
+            height: 80px;
+            font-family: "Sora-Regular";
+            font-size: 16px;
+            color: #404040;
+        }
+
+        hr {
+            margin-top: 24px;
+            width: 120px;
+            border: 2px solid #000000;
+        }
+
+        h2 {
+            margin-top: 24px;
+            font-family: "Sora-SemiBold";
+            font-size: 20px;
+            color: #404040;
+        }
+
+        span {
+            margin-top: 24px;
+            font-family: "Sora-SemiBold";
+            font-size: 16px;
+            color: #71717a;
+        }
+    }
+}

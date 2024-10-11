@@ -1,0 +1,80 @@
+@import '../moduls/colors';
+@import '../moduls/mixins';
+
+.header {
+    height: 105px;
+    background-color: $primary-color3;
+    border-bottom: 2px solid $primary-color1;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    @include flex-between-center();
+
+    .navbar {
+        height: 55px;
+        @include flex-between-center();
+
+        &-logo {
+            width: 140px;
+            font-family: "Sora-Bold";
+            @include flex-evenly-center();
+
+            a {
+                width: 100%;
+                font-size: 20px;
+                text-decoration: none;
+                color: $primary-color1;
+                @include flex-evenly-center();
+            }
+        }
+
+        &-list {
+            list-style-type: none;
+            padding-inline-start: 0;
+        }
+
+        &-item {
+            display: inline-block;
+            font-family: "Sora-SemiBold";
+            font-size: 20px;
+            margin-right: 32px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: $primary-color1;
+
+                &:hover {
+                    font-family: "Sora-ExtraBold";
+                    text-shadow: 0 4px 4px rgba($color: $primary-color1, $alpha: 0.25);
+                    transition: all 0.4s;
+                }
+            }
+        }
+
+        &-btn {
+            width: 155px;
+            height: 55px;
+            padding: 16px 20px;
+            border: 2px solid $primary-color1;
+            border-radius: 4px;
+            background-color: $primary-color1;
+            color: $primary-color3;
+            font-family: 'Sora-SemiBold';
+            font-size: 16px;
+            outline: none;
+            cursor: pointer;
+            @include flex-around-center();
+
+            &:hover {
+                background-color: $primary-color3;
+                color: $primary-color1;
+                border: 2px solid $primary-color1;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
