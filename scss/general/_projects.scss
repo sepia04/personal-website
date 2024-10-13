@@ -38,10 +38,16 @@
     }
 
     .project-card {
+        width: 100%;
+
         i {
             font-size: 20px;
             cursor: pointer;
             color: $primary-color3;
+        }
+
+        img {
+            width: 100%;
         }
     }
 

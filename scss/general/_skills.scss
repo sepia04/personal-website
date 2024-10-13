@@ -2,7 +2,7 @@
 @import '../moduls/mixins';
 
 .skills {
-    height: 730px;
+    min-height: 730px;
     padding: 60px 0;
 
     &-title {
@@ -69,7 +69,7 @@
             font-size: 16px;
         }
     }
-    
+
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
@@ -84,13 +84,6 @@
             margin-top: 50px;
             gap: 20px;
         }
-
-        // &-card {
-        //     width: 45%;
-        //     // height: 45%;
-        //     // width: 160px;
-        //     height: 160px;
-        // }
 
         &-name {
             font-size: 20px;
@@ -113,8 +106,6 @@
 
         &-card {
             width: 45%;
-            // height: 45%;
-            // width: 160px;
             height: 160px;
         }
 
@@ -122,5 +113,4 @@
             font-size: 20px;
         }
     }
-    
 }

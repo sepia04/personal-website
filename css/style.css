@@ -130,6 +130,7 @@
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     row-gap: 40px;
     padding: 100px 35px;
     position: fixed;
@@ -180,6 +181,7 @@
     max-height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     row-gap: 40px;
     padding: 100px 35px;
     position: fixed;
@@ -337,7 +339,7 @@
   }
 }
 .skills {
-  height: 730px;
+  min-height: 730px;
   padding: 60px 0;
 }
 .skills-title {
@@ -453,7 +455,7 @@
   margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
-  width: 1168px;
+  width: 100%;
   height: 640px;
   display: flex;
   flex-direction: column;
@@ -467,7 +469,7 @@
   border-radius: 4px;
 }
 .experience-card p {
-  width: 1120px;
+  width: 90%;
   margin-top: 28px;
   font-family: "Sora-Regular";
   font-size: 16px;
@@ -480,23 +482,20 @@
   transition: all 0.4s;
 }
 .experience .card-header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 62px 4fr 1fr;
   align-items: center;
   margin-top: 30px;
   margin-right: 24px;
   margin-left: 24px;
 }
 .experience .card-title {
-  width: 470px;
   font-family: "Sora-SemiBold";
   font-size: 24px;
   line-height: 1.16;
   color: #ffffff;
-  margin-left: 30px;
-  margin-right: 424px;
 }
 .experience .card-date {
-  width: 180px;
   font-family: "Sora-SemiBold";
   font-size: 16px;
   line-height: 1.25;
@@ -684,6 +683,9 @@
     height: auto;
     padding-bottom: 80px;
   }
+  .about-content {
+    width: 100%;
+  }
   .about .container {
     flex-direction: column;
   }
@@ -746,10 +748,16 @@
 .projects .right-text {
   justify-self: end;
 }
+.projects .project-card {
+  width: 100%;
+}
 .projects .project-card i {
   font-size: 20px;
   cursor: pointer;
   color: #ffffff;
+}
+.projects .project-card img {
+  width: 100%;
 }
 .projects .project-number {
   font-family: "Sora-ExtraBold";
@@ -893,7 +901,7 @@
   }
 }
 .testimonial {
-  height: 715px;
+  min-height: 715px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -980,7 +988,7 @@
 }
 .testimonial-card {
   scroll-snap-align: start;
-  height: 397px;
+  min-height: 397px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1007,11 +1015,11 @@
   height: 96px;
 }
 .testimonial-card p {
-  width: 290px;
+  width: 70%;
   text-align: center;
   margin-top: 24px;
-  min-width: 290px;
-  height: 80px;
+  max-width: 290px;
+  min-height: 80px;
   font-family: "Sora-Regular";
   font-size: 16px;
   color: #404040;
@@ -1054,6 +1062,9 @@
   }
   .testimonial-carousel {
     grid-auto-columns: calc(50% - 9px);
+  }
+  .testimonial-card {
+    height: auto;
   }
 }
 @media screen and (max-width: 480px) {

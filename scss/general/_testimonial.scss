@@ -2,7 +2,7 @@
 @import '../moduls/mixins';
 
 .testimonial {
-    height: 715px;
+    min-height: 715px;
     @include flex-center-center();
 
     .container {
@@ -96,7 +96,7 @@
 
     &-card {
         scroll-snap-align: start;
-        height: 397px;
+        min-height: 397px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -129,11 +129,11 @@
         }
 
         p {
-            width: 290px;
+            width: 70%;
             text-align: center;
             margin-top: 24px;
-            min-width: 290px;
-            height: 80px;
+            max-width: 290px;
+            min-height: 80px;
             font-family: "Sora-Regular";
             font-size: 16px;
             color: #404040;
@@ -185,6 +185,10 @@
 
         &-carousel {
             grid-auto-columns: calc((100% / 2) - 9px);
+        }
+
+        &-card {
+            height: auto;
         }
     }
 }

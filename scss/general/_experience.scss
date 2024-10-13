@@ -21,7 +21,7 @@
         margin-top: 80px;
         margin-right: auto;
         margin-left: auto;
-        width: 1168px;
+        width: 100%;
         height: 640px;
         display: flex;
         flex-direction: column;
@@ -36,7 +36,7 @@
         border-radius: 4px;
 
         p {
-            width: 1120px;
+            width: 90%;
             margin-top: 28px;
             font-family: "Sora-Regular";
             font-size: 16px;
@@ -52,7 +52,8 @@
     }
 
     .card-header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 62px 4fr 1fr;
         align-items: center;
         margin-top: 30px;
         margin-right: 24px;
@@ -60,17 +61,13 @@
     }
 
     .card-title {
-        width: 470px;
         font-family: "Sora-SemiBold";
         font-size: 24px;
         line-height: 1.16;
         color: $primary-color3;
-        margin-left: 30px;
-        margin-right: 424px;
     }
 
     .card-date {
-        width: 180px;
         font-family: "Sora-SemiBold";
         font-size: 16px;
         line-height: 1.25;
