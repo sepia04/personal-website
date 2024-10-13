@@ -52,3 +52,51 @@
         line-height: 24px;
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .skills {
+        height: auto;
+
+        &-title {
+            font-size: 36px;
+        }
+
+        &-grid {
+            margin-top: 50px;
+        }
+
+        &-name {
+            font-size: 16px;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {
+    .skills {
+        height: auto;
+
+        &-title {
+            font-size: 24px;
+        }
+
+        &-grid {
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        &-card {
+            width: 45%;
+            // height: 45%;
+            // width: 160px;
+            height: 160px;
+        }
+
+        &-name {
+            font-size: 20px;
+        }
+    }
+    
+}

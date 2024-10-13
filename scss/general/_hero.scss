@@ -9,10 +9,15 @@
     .container {
         display: flex;
         justify-content: space-between;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &-content {
-        width: 600px;
+        // width: 600px;
+        width: 46%;
         height: 475px;
         margin-top: 115px;
 
@@ -42,7 +47,7 @@
     }
 
     &-title {
-        width: 100%;
+        // width: 100%;
         font-family: "Sora-Regular";
         font-size: 48px;
 
@@ -74,5 +79,78 @@
         margin-top: 32px;
         margin-bottom: 110px;
         line-height: 1.5;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .hero {
+        height: auto;
+
+        .container {
+            flex-direction: column-reverse;
+            img {
+                width: 100%;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            height: auto;
+            margin-top: 35px;
+        }
+
+        &-title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .hero {
+        height: auto;
+
+        .container {
+            flex-direction: column-reverse;
+            img {
+                width: 100%;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            height: auto;
+            margin-top: 35px;
+        }
+
+        &-title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .hero {
+        height: auto;
+
+        .container {
+            flex-direction: column-reverse;
+            img {
+                width: 100%;
+            }
+        }
+
+        &-content {
+            width: 100%;
+            height: auto;
+            margin-top: 35px;
+        }
+
+        &-title {
+            font-size: 36px;
+        }
+
+        .social-icons {
+            width: 90%;
+        }
     }
 }

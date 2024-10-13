@@ -9,6 +9,10 @@
     .container {
         display: flex;
         justify-content: space-around;
+
+        img {
+            max-width: 100%;
+        }
     }
 
     &-content {
@@ -30,6 +34,50 @@
 
         span {
             font-family: "Sora-ExtraBold";
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .about {
+        height: auto;
+        padding-bottom: 80px;
+
+        .container {
+            flex-direction: column;
+
+            img {
+                margin-bottom: 25px;
+            }
+        }
+
+        &-title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {
+    .about {
+        height: auto;
+        padding-bottom: 80px;
+
+        .container {
+            flex-direction: column;
+
+            img {
+                margin-bottom: 25px;
+            }
+        }
+
+        &-content {
+            width: 100%;
+        }
+
+        &-title {
+            font-size: 24px;
         }
     }
 }

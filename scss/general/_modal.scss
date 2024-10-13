@@ -15,7 +15,8 @@
 
     &-main {
         border-radius: 4px;
-        width: 700px;
+        // width: 700px;
+        width: 70%;
         height: 485px;
         margin: auto;
         background-color: $primary-color3;
@@ -143,6 +144,30 @@
 
         &:focus-visible {
             outline-color: black;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {}
+
+@media screen and (max-width: 479px) {
+    .contact-modal {
+        &-main {
+            width: 100%;
+        }
+
+        &-btns {
+            button {
+                width: 95px;
+                height: 53.2px;
+                font-size: 14px;
+            }
+
+            a {
+                width: 43.2px;
+            }
         }
     }
 }
