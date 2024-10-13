@@ -57,9 +57,26 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .about {
+        height: auto;
+        padding-bottom: 80px;
 
-@media screen and (max-width: 479px) {
+        .container {
+            flex-direction: column;
+
+            img {
+                margin-bottom: 25px;
+            }
+        }
+
+        &-title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
     .about {
         height: auto;
         padding-bottom: 80px;

@@ -111,6 +111,56 @@
     font-size: 14px;
   }
 }
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .header {
+    height: 75px;
+  }
+  .header .navbar-list, .header .navbar-btn {
+    display: none;
+  }
+  .header .navbar-list.show {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar-btn.show {
+    display: block;
+  }
+  .header .navbar .open {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 100px 35px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 20;
+  }
+  .header .navbar .open li a {
+    font-size: 32px;
+  }
+  .header .navbar-burger {
+    width: 36px;
+    height: 36px;
+    font-size: 27px;
+    display: block;
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 25px;
+    z-index: 25;
+  }
+  .header .navbar-burger-close {
+    display: none;
+  }
+}
 @media screen and (max-width: 479px) {
   .header {
     height: 75px;
@@ -245,7 +295,7 @@
     font-size: 36px;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .hero {
     height: auto;
   }
@@ -264,7 +314,7 @@
     font-size: 36px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 480px) {
   .hero {
     height: auto;
   }
@@ -348,7 +398,22 @@
     font-size: 16px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .skills {
+    height: auto;
+  }
+  .skills-title {
+    font-size: 24px;
+  }
+  .skills-grid {
+    margin-top: 50px;
+    gap: 20px;
+  }
+  .skills-name {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
   .skills {
     height: auto;
   }
@@ -481,7 +546,50 @@
     width: auto;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .experience {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .experience .container {
+    height: auto;
+  }
+  .experience-title {
+    font-size: 36px;
+  }
+  .experience-grid {
+    width: 90%;
+    height: auto;
+  }
+  .experience-card {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .experience-card p {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: auto;
+  }
+  .experience .card-header {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .experience .card-title {
+    width: auto;
+    margin: 0;
+    margin-top: 15px;
+  }
+  .experience .card-date {
+    margin: 0;
+    margin-top: 15px;
+    width: auto;
+  }
+}
+@media screen and (max-width: 480px) {
   .experience {
     height: auto;
     padding-bottom: 80px;
@@ -571,7 +679,22 @@
     font-size: 36px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .about {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .about .container {
+    flex-direction: column;
+  }
+  .about .container img {
+    margin-bottom: 25px;
+  }
+  .about-title {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 480px) {
   .about {
     height: auto;
     padding-bottom: 80px;
@@ -648,6 +771,46 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .projects {
+    height: auto;
+    padding-bottom: 60px;
+  }
+  .projects-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+  .projects-grid {
+    height: auto;
+    row-gap: 20px;
+  }
+  .projects .project-card {
+    width: 100%;
+  }
+  .projects .project-img {
+    display: flex;
+    justify-content: center;
+  }
+  .projects .project-img img {
+    display: block;
+    width: 100%;
+  }
+  .projects .project-number {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+  .projects .project-title {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 28px;
+  }
+  .projects .project-descr {
+    font-size: 16px;
+    color: #71717a;
+    margin-bottom: 28px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
   .projects {
     height: auto;
     padding-bottom: 60px;
@@ -882,7 +1045,18 @@
     grid-auto-columns: calc(50% - 9px);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .testimonial {
+    height: auto;
+  }
+  .testimonial-title {
+    font-size: 36px;
+  }
+  .testimonial-carousel {
+    grid-auto-columns: calc(50% - 9px);
+  }
+}
+@media screen and (max-width: 480px) {
   .testimonial {
     height: auto;
   }
@@ -976,6 +1150,9 @@
   .contact-title {
     font-size: 36px;
   }
+  .contact-descr {
+    height: auto;
+  }
   .contact-details a {
     font-size: 24px;
   }
@@ -983,7 +1160,24 @@
     font-size: 14px;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .contact {
+    height: auto;
+  }
+  .contact-title {
+    font-size: 36px;
+  }
+  .contact-descr {
+    height: auto;
+  }
+  .contact-details a {
+    font-size: 24px;
+  }
+  .contact-btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
   .contact {
     height: auto;
   }
@@ -1191,6 +1385,14 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer-info-years, .footer-info-text {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer-info {
+    justify-content: space-evenly;
+  }
   .footer-info-years, .footer-info-text {
     font-size: 14px;
   }

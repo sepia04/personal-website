@@ -175,9 +175,21 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .testimonial {
+        height: auto;
 
-@media screen and (max-width: 500px) {
+        &-title {
+            font-size: 36px;
+        }
+
+        &-carousel {
+            grid-auto-columns: calc((100% / 2) - 9px);
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
     .testimonial {
         height: auto;
 

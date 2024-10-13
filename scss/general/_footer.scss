@@ -62,7 +62,17 @@
     }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .footer {
+        &-info {
+            justify-content: space-evenly;
+            &-years,
+            &-text {
+                font-size: 14px;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 479px) {
     .footer {
