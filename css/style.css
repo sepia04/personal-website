@@ -215,6 +215,7 @@
 }
 .hero {
   height: 715px;
+  background-color: #ffffff;
   padding-top: 60px;
   padding-bottom: 32px;
 }
@@ -340,6 +341,7 @@
 }
 .skills {
   min-height: 730px;
+  background-color: #ffffff;
   padding: 60px 0;
 }
 .skills-title {
@@ -902,6 +904,7 @@
 }
 .testimonial {
   min-height: 715px;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1080,6 +1083,7 @@
 }
 .contact {
   height: 575px;
+  background-color: #ffffff;
 }
 .contact .container {
   padding: 80px 0;
